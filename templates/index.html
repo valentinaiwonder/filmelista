@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de filmes </title>
+    <link rel="stylesheet" href="static/css/estiloindex.css">
+</head>
+<body>
+    <h1> Lista de filmes </h1>
+<ul>
+{% for filme in adicionar %}
+<li>{{ filme[1] }} - {{ filme[2] }} - {{ filme[3] }} - {{ filme[4] }} - {{ filme[5] }}
+    <ul>
+        <li><a href="/adicionar_filme/{{ filme[0] }}">EDITAR</a></li>
+    </ul>
+</li>
+{% endfor %}
+</ul>
+</body>
+</html>
